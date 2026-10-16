@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outerLayer{
+    width: 300px;
+    height: 300px;
+    border: 3px solid teal;
+    position: relative;
+    overflow: hidden;
+}
+
+.innerLayer{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(to right,transparent,rgb(167, 237, 237),transparent);
+    left: -70%;
+    transition: all 1s;
+}
+
+.outerLayer:hover .innerLayer{
+    left: 150%;
+}
+
+.test{
+    width: 300px;
+    height: 300px;
+    background-color: teal;
+    clip-path: polygon(
+         30% 0%,
+         70% 0%,
+         100% 30%,
+         100% 70%,
+         70% 100%,
+         30% 100%,
+         0% 70%,
+         0% 30%
+    );
+}
+
